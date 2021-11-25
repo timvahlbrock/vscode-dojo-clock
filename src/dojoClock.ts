@@ -14,8 +14,15 @@ export enum AvailableColor {
 };
 
 export class DojoClock {
+    private lastColor: AvailableColor | null = null;
+
     public getNextColor(): AvailableColor {
-        const colors = Object.values(AvailableColor);
-        return colors[randomInt(colors.length)];
+        let color: AvailableColor;
+        do {
+            const colors = Object.values(AvailableColor);
+            color = colors[randomInt(colors.length)];
+        } while (color === this.lastColor);
+        this.lastColor = color;
+        return color;
     }
 }
