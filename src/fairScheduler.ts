@@ -25,7 +25,7 @@ class Round<C> {
     private remainingParticipants: C[];
 
     public constructor(
-        private originalParticipants: C[]
+        originalParticipants: C[]
     ) {
         this.remainingParticipants = [...originalParticipants];
     }
