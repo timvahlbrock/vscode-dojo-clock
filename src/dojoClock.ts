@@ -1,28 +1,27 @@
 import { randomInt } from "crypto";
 
-export enum AvailableColor {
-    Blue = "Blue",
-    Green = "Green",
-    Red = "Red",
-    Purple = "Purple",
-    Orange = "Orange",
-    White = "White",
-    Black = "Black",
-    Turquoise = "Turquoise",
-    Violet = "Violet",
-    Pink = "Pink"
-};
+export class DojoClock<P> {
+    private lastParticipant: P | null = null;
 
-export class DojoClock {
-    private lastColor: AvailableColor | null = null;
+    public constructor(
+        private participants: P[]
+    ) { }
 
-    public getNextColor(): AvailableColor {
-        let color: AvailableColor;
+    public getNext(): P {
+        let candidate: P;
         do {
-            const colors = Object.values(AvailableColor);
-            color = colors[randomInt(colors.length)];
-        } while (color === this.lastColor);
-        this.lastColor = color;
-        return color;
+            candidate = this.getRandom();
+        } while (candidate === this.lastParticipant);
+        this.lastParticipant = candidate;
+        return candidate;
+    }
+
+    private getRandom(): P {
+        const randomIndex = randomInt(this.itemCount);
+        return this.participants[randomIndex];
+    }
+
+    private get itemCount(): number {
+        return this.participants.length;
     }
 }

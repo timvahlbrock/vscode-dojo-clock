@@ -1,11 +1,12 @@
 # ToDos
 
 - [x] get one color
-- [ ] get one color after time
 - [x] don't get same color again
+- [x] replace colors with more complex objects
+- [x] pass in names/colors beforehand?
+- [ ] get each particpant once before starting next round
+- [ ] get one particpant after time
 - [ ] second role
-- [ ] don't get color of second role again
-- [ ] pass in names/colors beforehand?
-- [ ] only use amount of players for colors
+- [ ] don't get particpant of second role again
 - [ ] vscode integration
-- [ ] get each color once before starting next round
+- [ ] only use amount of players for colors
