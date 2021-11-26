@@ -4,7 +4,7 @@
 - [x] don't get same color again
 - [x] replace colors with more complex objects
 - [x] pass in names/colors beforehand?
-- [ ] get each particpant once before starting next round
+- [x] get each particpant once before starting next round
 - [ ] get one particpant after time
 - [ ] second role
 - [ ] don't get particpant of second role again
