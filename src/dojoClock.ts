@@ -1,6 +1,6 @@
 import { randomInt } from "crypto";
 
-export class DojoClock<P> {
+export class FairScheduler<P> {
     private lastParticipant: P | null = null;
 
     public constructor(

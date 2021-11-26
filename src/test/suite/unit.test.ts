@@ -1,5 +1,5 @@
 import * as assert from 'assert';
-import { DojoClock } from '../../dojoClock';
+import { FairScheduler } from '../../dojoClock';
 
 export const participantColors = [
     "Blue",
@@ -15,9 +15,9 @@ export const participantColors = [
 ];
 
 suite('Unit Test Suite', () => {
-    let clock: DojoClock<string>;
+    let clock: FairScheduler<string>;
     suiteSetup(() => {
-        clock = new DojoClock(participantColors);
+        clock = new FairScheduler(participantColors);
     });
 
     test('Gives random color', () => {
