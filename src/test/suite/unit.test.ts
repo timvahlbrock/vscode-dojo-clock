@@ -1,5 +1,5 @@
 import * as assert from 'assert';
-import { FairScheduler } from '../../dojoClock';
+import { FairScheduler } from '../../fairScheduler';
 
 export const participantColors = [
     "Blue",
